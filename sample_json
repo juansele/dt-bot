@@ -1,0 +1,43 @@
+{
+    accion:
+    usuario:
+    estado:
+    paso:
+
+    tienda:
+    cadena:
+    supervisor:
+    fecha:
+}
+
+
+{
+    "accion": "visita agosto alkosto",
+    "pasos":  [
+        {
+            "tipo": "ubicacion",
+            "mensaje": "que tienda vamos a visitar hoy?"
+        },
+        {
+            "tipo": "foto",
+            "mensaje": "ok, revisemos a los asesores primero. Envíame una o dos fotos de los asesores"
+        },
+        {
+            "tipo": "cerrada",
+            "mensaje": "hay alguna novedad con los asesores?",
+            "opciones": ["si", "no"]
+        },
+        {
+            "tipo": "texto",
+            "mensaje": "tienes algun comentario respecto a los asesores?"
+        }
+    ]
+}
+
+
+db.usuarios.insert(
+    {
+        "nombre": "Juan León",
+        "telefono": "3158175486"
+    }
+)
