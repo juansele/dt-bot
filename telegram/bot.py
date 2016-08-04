@@ -25,8 +25,12 @@ def main():
     dp = updater.dispatcher
 
     # Add conversation handler with the states GENDER, PHOTO, LOCATION and BIO
+    dtRegHandler = dreamteam.register_handler()
+    dtIdleHandler = dreamteam.idle_handler()
     dtHandler = dreamteam.DTHandler()
 
+    dp.add_handler(dtRegHandler)
+    dp.add_handler(dtIdleHandler)
     dp.add_handler(dtHandler)
 
     # log all errors
